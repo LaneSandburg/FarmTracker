@@ -1,0 +1,54 @@
+﻿<Window x:Class="FarmTacker.frmCrop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmTacker"
+        mc:Ignorable="d"
+        Title="frmCrop" Height="450"  Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>            
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                 Margin="0 0 10 0">Crop ID</Label>
+        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                 Margin="0 0 10 0">Seed Number</Label>        
+        <Label Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                 Margin="0 0 10 0">Price Per Bag</Label>
+        <Label Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                 Margin="0 0 10 0">Description</Label>
+
+        <TextBox x:Name="txtCropID" Background="BlanchedAlmond" Padding="10 0" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"
+                 Margin="0 5 40 5" ToolTip="this item can not be editted"></TextBox>
+        <TextBox x:Name="txtSeedNum" Padding="10 0" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"
+                 Margin="0 5 40 5"></TextBox>
+        <TextBox x:Name="txtPricePerBag" Padding="10 0" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"
+                 Margin="0 5 40 5"></TextBox>
+        <TextBox x:Name="txtDescription" Padding="10 0" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"
+                 Margin="0 5 40 5"></TextBox>
+        
+        
+        <Button x:Name="btnEdit" Grid.Row="5" Grid.Column="0" Margin="5" Width="100"
+                HorizontalAlignment="Right" Content="Edit" Click="btnEdit_Click"  ></Button>        
+        <Button x:Name="btnSave" Grid.Row="5" Grid.Column="0" Margin="5" Width="100"
+                HorizontalAlignment="Right" Content="Save" Visibility="Hidden" Click="btnSave_Click"  ></Button>
+        <Button x:Name="btnCancel" Grid.Row="5" Grid.Column="1" Margin="5" Width="100" 
+                HorizontalAlignment="Left" Content="Cancel" Click="btnCancel_Click"   ></Button>
+        <Button x:Name="btnDelete" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Width="100"
+                 Content="Delete" Click="btnDelete_Click"  ></Button>
+    </Grid>
+</Window>

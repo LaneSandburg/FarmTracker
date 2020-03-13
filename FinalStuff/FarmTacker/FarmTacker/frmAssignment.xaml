@@ -1,0 +1,65 @@
+﻿<Window x:Class="FarmTacker.frmAssignment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmTacker"
+        mc:Ignorable="d"
+        Title="frmAssignment" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>            
+            <RowDefinition Height="40"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">MachineFieldUseID</Label>
+        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">FarmFieldID</Label>
+        <Label Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">UsageTypeID</Label>
+        <Label Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">MachineID</Label>
+        <Label Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">UserID</Label>
+        <Label Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">Description</Label>
+        <Label Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Right"
+                               Margin="0 0 10 0">Completed</Label>
+
+        <TextBox x:Name="txtMachineFieldUseID" Background="BlanchedAlmond" Padding="10 0" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"
+               Margin="0 5 40 5" ToolTip="this item can not be editted"></TextBox>
+        <ComboBox x:Name="cboFarmFieldID" Padding="10 0" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"
+               Margin="0 5 40 5"></ComboBox>
+        <ComboBox x:Name="cboUsageTypeID" Padding="10 0" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"
+               Margin="0 5 40 5"></ComboBox>
+        <ComboBox x:Name="cboMachineID" Padding="10 0" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"
+               Margin="0 5 40 5"></ComboBox>
+        <ComboBox x:Name="cboUserID" Padding="10 0" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"
+               Margin="0 5 40 5"></ComboBox>
+        <TextBox x:Name="txtDescription" Padding="10 0" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center"
+               Margin="0 5 40 5"></TextBox>
+        <CheckBox  x:Name="chkCompleted" VerticalAlignment="Center" Grid.Row="7" Grid.Column="1" Click="chkCompleted_Click"     ></CheckBox>
+
+
+        <Button x:Name="btnEdit" Grid.Row="10" Grid.Column="0" Margin="5" Width="100"
+              HorizontalAlignment="Right" Content="Edit" Click="btnEdit_Click"></Button>
+        <Button x:Name="btnSave" Grid.Row="10" Grid.Column="0" Margin="5" Width="100"
+              HorizontalAlignment="Right" Content="Save" Visibility="Hidden" Click="btnSave_Click"></Button>
+        <Button x:Name="btnCancel" Grid.Row="10" Grid.Column="1" Margin="5" Width="100"
+              HorizontalAlignment="Left" Content="Cancel" Click="btnCancel_Click" ></Button>
+
+    </Grid>
+</Window>
