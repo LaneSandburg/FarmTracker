@@ -36,11 +36,12 @@ namespace LogicLayer
             return result;
         }
 
-        public bool EditFarm(Farm oldFarm, Farm newFarm)
+        public bool EditFarm(string id, Farm newFarm)
         {
             bool result = false;
             try
             {
+                Farm oldFarm = _farmAccessor.SelectFarmByFarmID(id);
                 result = (1 == _farmAccessor.UpdateFarm(oldFarm, newFarm));
             }
             catch (Exception ex)

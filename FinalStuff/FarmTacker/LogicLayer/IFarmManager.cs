@@ -12,7 +12,7 @@ namespace LogicLayer
         List<Farm> GetFarmListByActive(bool active = true);
         Farm GetFarmByFarmID(string farmID);
         bool AddFarm(Farm farm);
-        bool EditFarm(Farm oldFarm, Farm newFarm);
+        bool EditFarm(string id, Farm newFarm);
         bool SetFarmActiveState(bool active, string farmID);
         List<Field> RetreiveFarmFields(string farmID);
     }

@@ -14,3 +14,11 @@ D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\DataAccessLayer\
 D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\bin\Debug\DataObjects.dll
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\bin\Debug\DataObjects.pdb
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

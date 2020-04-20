@@ -2,10 +2,11 @@
 
 
 
-<h2>@ViewBag.Title</h2>
+<h2>Deactivate</h2>
 
+<h3>Are you sure you want to deactivate this Farm?</h3>
 <div>
-    <h4>@Model.FarmID</h4>
+    <h4> @Html.DisplayFor(model => model.FarmID)</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -50,35 +51,14 @@
 
 
     </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deactivate" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
 </div>
-
-
-<h3>@Model.FarmID's Fields</h3>
-<div class="form-group">
-    <table style="width:40%">
-        <tr>
-            <th>FarmFieldID</th>
-            <th>CropID</th>
-            <th>Acres</th>
-        </tr>
-        @foreach (var field in ViewBag.fields)
-        {
-            <tr>
-
-                <td>@field.FarmFieldID</td>
-                <td>@field.CropID</td>
-                <td>@field.Acres</td>
-                <td>
-
-
-                    @Html.ActionLink("Details", "Details", "Field", new { id = field.FarmFieldID }, htmlAttributes: new { id = field.FarmFieldID })
-                </td>
-            </tr>
-        }
-    </table>
-</div>
-
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.FarmID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -1,0 +1,88 @@
+﻿@model DataObjects.Field
+
+
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Field</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmFieldID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmFieldID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CropID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CropID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PastYield)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PastYield)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentYield)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentYield)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantOnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantOnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HarvestDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HarvestDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastSprayedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastSprayedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FarmFieldID }) |
+    @Html.ActionLink("Back to Farm", "Details", "Farm", new { id = Model.FarmID }, htmlAttributes: new { id = Model.FarmID })
+</p>

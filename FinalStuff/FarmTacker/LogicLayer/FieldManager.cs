@@ -54,11 +54,29 @@ namespace LogicLayer
             return fields;
         }
 
-        public bool UpdateField(Field oldField, Field newField)
+        public Field RetrieveFieldByID(string farmFieldID)
+        {
+            Field field = null;
+
+            try
+            {
+                field = _fieldAccessor.SelectFieldByFarmFieldID(farmFieldID);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Fields not found", ex);
+            }
+
+            return field;
+        }
+
+        public bool UpdateField(string id, Field newField)
         {
             bool result = false;
             try
             {
+                var oldField = _fieldAccessor.SelectFieldByFarmFieldID(id);
                 result = (1 == _fieldAccessor.UpdateField(oldField, newField));
             }
             catch (Exception ex)

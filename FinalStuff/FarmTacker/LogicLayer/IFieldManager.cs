@@ -10,7 +10,8 @@ namespace LogicLayer
     public interface IFieldManager
     {
         bool AddField(Field field);
-        bool UpdateField(Field oldField , Field newField);
+        bool UpdateField(string id, Field newField);
         List<string> RetreiveAllFields();
+        Field RetrieveFieldByID(string farmFieldID);
     }
 }

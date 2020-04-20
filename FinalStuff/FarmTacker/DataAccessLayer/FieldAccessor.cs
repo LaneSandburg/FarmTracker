@@ -87,7 +87,7 @@ namespace DataAccessLayer
             var cmd1 = new SqlCommand("sp_select_field_by_farmfieldID", conn);
             cmd1.CommandType = CommandType.StoredProcedure;
 
-            cmd1.Parameters.Add("@FarmFieldID", SqlDbType.NVarChar);
+            cmd1.Parameters.AddWithValue("@FarmFieldID", farmFieldID);
 
             try
             {
