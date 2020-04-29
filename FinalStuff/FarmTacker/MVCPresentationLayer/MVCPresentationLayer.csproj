@@ -168,13 +168,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AssignmentsController.cs" />
+    <Compile Include="Controllers\CropController.cs" />
     <Compile Include="Controllers\FarmController.cs" />
     <Compile Include="Controllers\FieldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MachineController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004241621340_InitialCreate.cs" />
+    <Compile Include="Migrations\202004241621340_InitialCreate.Designer.cs">
+      <DependentUpon>202004241621340_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004241639206_Added First and Last Name Fields to User.cs" />
+    <Compile Include="Migrations\202004241639206_Added First and Last Name Fields to User.Designer.cs">
+      <DependentUpon>202004241639206_Added First and Last Name Fields to User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004282017093_UserID.cs" />
+    <Compile Include="Migrations\202004282017093_UserID.Designer.cs">
+      <DependentUpon>202004282017093_UserID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -244,6 +261,24 @@
     <Content Include="Views\Farm\Delete.cshtml" />
     <Content Include="Views\Field\Details.cshtml" />
     <Content Include="Views\Field\Edit.cshtml" />
+    <Content Include="Views\Machine\Index.cshtml" />
+    <Content Include="Views\Machine\Details.cshtml" />
+    <Content Include="Views\Machine\Create.cshtml" />
+    <Content Include="Views\Machine\Edit.cshtml" />
+    <Content Include="Views\Machine\Delete.cshtml" />
+    <Content Include="Views\Crop\Index.cshtml" />
+    <Content Include="Views\Crop\Details.cshtml" />
+    <Content Include="Views\Crop\Create.cshtml" />
+    <Content Include="Views\Crop\Edit.cshtml" />
+    <Content Include="Views\Crop\Delete.cshtml" />
+    <Content Include="Views\Assignments\Index.cshtml" />
+    <Content Include="Views\Assignments\Details.cshtml" />
+    <Content Include="Views\Assignments\Create.cshtml" />
+    <Content Include="Views\Assignments\Edit.cshtml" />
+    <Content Include="Views\Assignments\Delete.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Account\RegisterEmployeeUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,6 +305,17 @@
       <Project>{d9611cb9-5985-4383-9cd0-81e1b57c4ecf}</Project>
       <Name>LogicLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004241621340_InitialCreate.resx">
+      <DependentUpon>202004241621340_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241639206_Added First and Last Name Fields to User.resx">
+      <DependentUpon>202004241639206_Added First and Last Name Fields to User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004282017093_UserID.resx">
+      <DependentUpon>202004282017093_UserID.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

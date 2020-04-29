@@ -42,7 +42,7 @@
                    VerticalContentAlignment="Top" HorizontalAlignment="Center">Username</Label>
 
             <PasswordBox x:Name="pwdPassword"
-                Grid.Row="0" Grid.Column="3" Password="Password" HorizontalContentAlignment="Center"
+                Grid.Row="0" Grid.Column="3" Password="newuser" HorizontalContentAlignment="Center"
                          Margin="5 2" VerticalAlignment="Bottom" FontWeight="Bold" Background="AliceBlue"></PasswordBox>
             <Label x:Name="lblPassword" Grid.Row="1" Grid.Column="3" VerticalAlignment="Top" Padding="0" FontSize="10" FontWeight="DemiBold"
                    VerticalContentAlignment="Top" HorizontalAlignment="Center">Password</Label>

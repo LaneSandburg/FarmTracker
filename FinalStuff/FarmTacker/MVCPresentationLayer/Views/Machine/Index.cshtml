@@ -1,0 +1,71 @@
+﻿@model IEnumerable<DataObjects.Machine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineStatusID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineTypeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineStatusID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MachineID })
+
+                |
+                @Html.ActionLink("Details", "Details", new { id = item.MachineID }) |
+
+                    @Html.ActionLink("Deactivate", "Delete", new { id = item.MachineID })
+                
+                </td>
+        </tr>
+    }
+
+</table>

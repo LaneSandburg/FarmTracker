@@ -28,3 +28,13 @@ C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\
 C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
 C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.dll
 C:\Users\Lane Sandburg\Desktop\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\bin\Debug\LogicLayer.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\bin\Debug\LogicLayer.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\bin\Debug\DataAccessLayer.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\bin\Debug\DataObjects.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\bin\Debug\DataObjects.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.csprojAssemblyReference.cache
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\LogicLayer\obj\Debug\LogicLayer.pdb

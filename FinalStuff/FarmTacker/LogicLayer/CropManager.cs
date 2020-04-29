@@ -70,6 +70,20 @@ namespace LogicLayer
             return result;
         }
 
+        public Crop GetCropByID(string ID)
+        {
+            try
+            {
+
+                return _cropAccessor.SelectCropByID(ID);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Crop Not Available", ex);
+            }
+        }
+
         public List<Crop> GetCropList()
         {
             try

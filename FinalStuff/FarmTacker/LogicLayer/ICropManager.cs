@@ -10,6 +10,7 @@ namespace LogicLayer
     public interface ICropManager
     {
         List<Crop> GetCropList();
+        Crop GetCropByID(string ID);
         bool AddCrop(Crop crop);
         bool EditCrop(Crop oldCrop, Crop newCrop);
         bool DeleteCrop(string cropID);

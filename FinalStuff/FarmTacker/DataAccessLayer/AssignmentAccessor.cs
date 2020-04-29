@@ -215,5 +215,50 @@ namespace DataAccessLayer
             }
             return usages;
         }
+
+        public Assignment SelectAssignmentByID(int id)
+        {
+            var assignment = new Assignment();
+
+            var conn = DBConn.GetConnection();
+            var cmd = new SqlCommand("sp_select_machine_field_use_by_id");
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MachineFieldUseID", id);
+
+            try
+            {
+                conn.Open();
+                var Reader = cmd.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        
+                        assignment.MachineFieldUseID = Reader.GetInt32(0);
+                        assignment.FarmFieldID = Reader.GetString(1);
+                        assignment.UsageTypeID = Reader.GetString(2);
+                        assignment.MachineID = Reader.GetString(3);
+                        assignment.UserID = Reader.GetInt32(4);
+                        assignment.Description = Reader.GetString(5);
+                        assignment.Completed = Reader.GetBoolean(6);                       
+
+                    }
+                }
+                Reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return assignment;
+        }
     }
 }

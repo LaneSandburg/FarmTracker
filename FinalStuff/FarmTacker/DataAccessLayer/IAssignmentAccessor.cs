@@ -10,6 +10,7 @@ namespace DataAccessLayer
     public interface IAssignmentAccessor
     {
         List<Assignment> SelectAssignmentByCompleted(bool completed = false);
+        Assignment SelectAssignmentByID(int id);
         List<string> SelectAllUsageTypes();
         int UpdateAssignment(Assignment oldAssignment, Assignment newAssignment);
         int InsertAssignment(Assignment assignment);

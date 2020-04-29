@@ -43,6 +43,7 @@ namespace FarmTacker
             InitializeComponent();
             _farmManager = farmManager;
             _userManager = userManager;
+            _cropManager = new CropManager();
         }
         public frmFarm(IUserManager userManager)
         {
@@ -79,6 +80,9 @@ namespace FarmTacker
 
             if (_addMode == false)
             {
+                DGFields.Visibility = Visibility.Visible;
+                btnAddField.Visibility = Visibility.Visible;
+                lblFields.Visibility = Visibility.Visible;
                 txtFarmID.Text = _Farm.FarmID;
                 cboLandOwner.SelectedItem = _Farm.UserID.ToString();
                 txtAddress.Text = _Farm.Address;
@@ -109,6 +113,9 @@ namespace FarmTacker
                 txtFarmID.Focus();
                 btnEdit.Visibility = Visibility.Hidden;
                 btnSave.Visibility = Visibility.Visible;
+                DGFields.Visibility = Visibility.Hidden;
+                btnAddField.Visibility = Visibility.Hidden;
+                lblFields.Visibility = Visibility.Hidden;
 
                 PopulateUserList();
             }
@@ -226,7 +233,7 @@ namespace FarmTacker
             {
                 try
                 {
-                    if (_farmManager.EditFarm(_Farm,farm))
+                    if (_farmManager.EditFarm(_Farm.FarmID,farm))
                     {
                         this.DialogResult = true;
                         this.Close();

@@ -26,6 +26,15 @@ namespace FarmTacker
         private IFarmManager _farmManager = null;
         private ICropManager _cropManager = null;
         private bool _addMode = true;
+
+        public frmField() 
+        {
+            _field = new Field();
+            _fieldManager = new FieldManager();
+            _farmManager = new FarmManager();
+            _cropManager = new CropManager();
+            InitializeComponent();
+        }
         public frmField(Field field)
         {
             _field = field;
@@ -282,7 +291,7 @@ namespace FarmTacker
             {
                 try
                 {
-                    if (_fieldManager.UpdateField(_field, field))
+                    if (_fieldManager.UpdateField(_field.FarmID, field))
                     {
                         this.DialogResult = true;
                         this.Close();

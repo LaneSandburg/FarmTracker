@@ -71,6 +71,40 @@ namespace DataAccessLayer
             return rows;
         }
 
+        public Crop SelectCropByID(string ID)
+        {
+            var crop = new Crop();
+
+            var conn = DBConn.GetConnection();
+            var cmd = new SqlCommand("sp_select_crop_by_id");
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CropID", ID);
+
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {                        
+                        crop.CropID = reader.GetString(0);
+                        crop.SeedNum = reader.GetString(1);
+                        crop.Description = reader.GetString(2);
+                        crop.PricePerBag = reader.GetDecimal(3);                        
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return crop;
+        }
+
         public List<Crop> SelectCrops()
         {
             List<Crop> crops = new List<Crop>();

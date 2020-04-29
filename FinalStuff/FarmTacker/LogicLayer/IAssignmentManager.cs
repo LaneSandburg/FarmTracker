@@ -10,6 +10,7 @@ namespace LogicLayer
     public interface IAssignmentManager
     {
         List<Assignment> GetAssignmentByCompleted(bool completed = false);
+        Assignment GetAssignmentByID(int id);
         List<string> RetreiveUsageTypes();
         bool AddAssignment(Assignment assignment);
         bool EditAssignment(Assignment oldAssignment, Assignment newAssignment);

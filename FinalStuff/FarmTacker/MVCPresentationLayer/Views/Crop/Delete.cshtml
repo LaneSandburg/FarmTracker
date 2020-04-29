@@ -1,0 +1,54 @@
+﻿@model DataObjects.Crop
+
+
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Crop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CropID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CropID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SeedNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeedNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerBag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerBag)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

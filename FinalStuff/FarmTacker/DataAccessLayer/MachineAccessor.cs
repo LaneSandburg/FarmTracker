@@ -195,6 +195,49 @@ namespace DataAccessLayer
             return machines;
         }
 
+        public Machine SelectMachineByID(string id)
+        {
+            var machine = new Machine();
+
+            var conn = DBConn.GetConnection();
+            var cmd = new SqlCommand("sp_select_machine_by_ID");
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@MachineID", SqlDbType.NVarChar);
+            cmd.Parameters["@MachineID"].Value = id;
+
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+
+                        machine.MachineID = reader.GetString(0);
+                        machine.Make = reader.GetString(1);
+                        machine.Model = reader.GetString(2);
+                        machine.MachineTypeID = reader.GetString(3);
+                        machine.MachineStatusID = reader.GetString(4);
+                        machine.Hours = reader.GetInt32(5);
+                        machine.Active = reader.GetBoolean(6);
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+            return machine;
+        }
+
         public int UpdateMachine(Machine oldMachine, Machine newMachine)
         {
             int rows = 0;

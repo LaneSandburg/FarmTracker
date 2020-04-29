@@ -83,6 +83,9 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.FarmFieldID }) |
-    @Html.ActionLink("Back to Farm", "Details", "Farm", new { id = Model.FarmID }, htmlAttributes: new { id = Model.FarmID })
+
+        @Html.ActionLink("Edit", "Edit", new { id = Model.FarmFieldID }) 
+
+    |
+@Html.ActionLink("Back to Farm", "Details", "Farm", new { id = Model.FarmID }, htmlAttributes: new { id = Model.FarmID })
 </p>

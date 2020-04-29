@@ -12,6 +12,7 @@ namespace DataAccessLayer
         User AuthenticateUser(string username, string passwordHash);
         bool UpdatePasswordHash(int userID, string oldPassHash, string newPassHash);
         List<User> SelectUserByActive(bool active = true);
+        User SelectUserByEmail(string email);
 
         List<User> SelectUserByRole(string roleID);
 

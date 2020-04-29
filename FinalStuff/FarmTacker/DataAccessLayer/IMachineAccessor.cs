@@ -10,6 +10,7 @@ namespace DataAccessLayer
     public interface IMachineAccessor
     {
         List<Machine> SelectMachineByActive(bool active = true);
+        Machine SelectMachineByID(string id);
         List<string> SelectAllMachineTypes();
         List<string> SelectAllMachineStatus();
         int UpdateMachine(Machine oldMachine, Machine newMachine);

@@ -2,28 +2,34 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>FarmCo.</h1>
-    <p class="lead">Welcome to FarmCo Farm Tracker!</p>
-    
-</div>
+    <div class="jumbotron"  style="background-color: tan;">
+        <h1>FarmCo. <img src="\Images\Tractor.jpg" style="float:right; max-width:25%; max-height:25%;   " /></h1>
+        
+        <p class="lead">Welcome to FarmCo Farm Tracker!</p>
+
+
+    </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="background-color:tan">
         <h2>Get to work</h2>
         <p>
-           select what you are trying to look at and get back to work.
+            Click Here to Create a New Work Assignment
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="@Url.Action("Create", "Assignments")">Create New Assignment &raquo;</a></p>
+    </div> 
+    <div class="col-md-4" style="background-color:tan">
+        <h2>Add a Crop</h2>
+        <p>
+            Click Here to Add a New Crop Listing
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Create", "Crop")">Create New Assignment &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-4" style="background-color:tan">
+        <h2>View all Farms</h2>
+        <p>
+            Click Here to View all Active Farm Listings 
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Farm")">Farm Home &raquo;</a></p>
     </div>
 </div>

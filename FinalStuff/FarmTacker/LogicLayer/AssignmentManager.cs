@@ -55,8 +55,6 @@ namespace LogicLayer
 
         public List<Assignment> GetAssignmentByCompleted(bool completed = false)
         {
-
-
             try
             {
 
@@ -66,6 +64,19 @@ namespace LogicLayer
             {
 
                 throw new ApplicationException("List Not Available", ex);
+            }
+        }
+
+        public Assignment GetAssignmentByID(int id)
+        {
+            try
+            {
+                return _assignmentAccessor.SelectAssignmentByID(id);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Assignment Not Available", ex);
             }
         }
 

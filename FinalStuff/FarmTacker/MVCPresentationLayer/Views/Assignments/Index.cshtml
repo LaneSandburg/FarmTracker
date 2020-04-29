@@ -1,0 +1,74 @@
+﻿@model IEnumerable<DataObjects.Assignment>
+
+
+
+<h2>@ViewBag.Title</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MachineFieldUseID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FarmFieldID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsageTypeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MachineID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Completed)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MachineFieldUseID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FarmFieldID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsageTypeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MachineID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Completed)
+                </td>
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MachineFieldUseID }) 
+                    } |
+                    @Html.ActionLink("Details", "Details", new { id = item.MachineFieldUseID }) |
+                    @Html.ActionLink("Complete", "Delete", new { id = item.MachineFieldUseID })
+                </td>
+            </tr>
+        }
+
+    </table>

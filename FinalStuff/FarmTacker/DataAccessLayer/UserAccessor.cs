@@ -352,7 +352,7 @@ namespace DataAccessLayer
             return rows;
         }
 
-        private User SelectUserByEmail(string email)
+        public User SelectUserByEmail(string email)
         {
             User user = null;
 

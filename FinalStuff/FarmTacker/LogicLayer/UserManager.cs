@@ -234,5 +234,40 @@ namespace LogicLayer
                 throw new ApplicationException("List Not Available", ex);
             }
         }
+
+        public bool FindUser(string email)
+        {
+            try
+            {
+                return _userAccessor.SelectUserByEmail(email) != null;
+            }
+            catch (ApplicationException ax)
+            {
+                if (ax.Message == "User Not Found")
+                {
+                    return false;
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Database Error", ex);
+            }
+        }
+
+        public int RetrieveUserIDFromEmail(string email)
+        {
+            try
+            {
+                return _userAccessor.SelectUserByEmail(email).UserID;
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Database Error",ex);
+            }        }
     }
 }

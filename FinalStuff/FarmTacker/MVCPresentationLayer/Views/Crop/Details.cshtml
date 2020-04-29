@@ -1,0 +1,48 @@
+﻿@model DataObjects.Crop
+
+
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Crop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CropID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CropID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SeedNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeedNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerBag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerBag)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CropID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

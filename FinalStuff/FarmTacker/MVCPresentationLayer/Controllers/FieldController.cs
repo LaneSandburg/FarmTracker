@@ -21,13 +21,14 @@ namespace MVCPresentationLayer.Controllers
             _farmManager = new FarmManager();
             _cropManager = new CropManager();
         }
-
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         public ActionResult Index()
         {
             return View();
         }
 
         // GET: Field/Details/5
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         public ActionResult Details(string id)
         {
             ViewBag.Title = "Field Details";
@@ -36,12 +37,14 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // GET: Field/Create
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: Field/Create
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -57,7 +60,8 @@ namespace MVCPresentationLayer.Controllers
             }
         }
 
-        // GET: Field/Edit/5
+        // GET: Field/Edit/id
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         public ActionResult Edit(string id)
         {
             ViewBag.Title = "Edit Field: " + id;
@@ -86,6 +90,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // POST: Field/Edit/5
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         [HttpPost]
         public ActionResult Edit(string id, Field newField)
         {
@@ -102,12 +107,14 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // GET: Field/Delete/5
+        [Authorize(Roles = "Admin,Manager")]
         public ActionResult Delete(int id)
         {
             return View();
         }
 
         // POST: Field/Delete/5
+        [Authorize(Roles = "Admin,Manager")]
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

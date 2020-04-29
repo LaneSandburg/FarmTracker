@@ -11,7 +11,8 @@ namespace LogicLayer
     {
         User AuthenticateUser(string email, string password);
         bool ResetPasword(int userID, string oldPassword, string newPassword);
-        List<User> GetUserListByActive(bool active = true);        
+        List<User> GetUserListByActive(bool active = true);
+        bool FindUser(string email);       
 
         bool EditUser(User oldUser, User newUser);
 
@@ -25,7 +26,7 @@ namespace LogicLayer
 
         bool deleteUserRole(int userID, string roleID);
         bool addUserRole(int userID, string roleID);
-
+        int RetrieveUserIDFromEmail(string email);
         
 
     }

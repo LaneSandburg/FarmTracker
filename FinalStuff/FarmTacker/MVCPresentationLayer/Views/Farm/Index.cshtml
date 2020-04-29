@@ -4,9 +4,11 @@
 
 <h2>@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
 <table class="table">
     <tr>
         <th>
@@ -54,10 +56,16 @@
             </td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.FarmID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.FarmID }) |
-                @Html.ActionLink("Deactivate", "Delete", new { id = item.FarmID })
-            </td>
+             
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FarmID })
+                
+                |
+                    @Html.ActionLink("Details", "Details", new { id = item.FarmID })
+                |   
+
+                    @Html.ActionLink("Deactivate", "Delete", new { id = item.FarmID })
+                
+                </td>
         </tr>
     }
 

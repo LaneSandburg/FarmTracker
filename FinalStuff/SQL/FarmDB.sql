@@ -354,7 +354,7 @@ print '' print '*** creating MachineFieldUse table'
 GO
 CREATE TABLE [dbo].[MachineFieldUse](
 	[MachineFieldUseID] [int]IDENTITY(100,1)	NOT NULL,
-	[FarmFieldID]		[nvarchar](50)					NOT NULL,	
+	[FarmFieldID]		[nvarchar](50)			NOT NULL,	
 	[UsageTypeID]		[nvarchar](50)			NOT NULL,
 	[MachineID]			[nvarchar](50)			NOT NULL,
 	[UserID]			[int]					NOT NULL,
@@ -887,6 +887,18 @@ BEGIN
 END
 GO
 
+print '' print '*** creating sp_select_crop_by_id'
+GO
+CREATE PROCEDURE [sp_select_crop_by_id](
+	@CropID [nvarChar](50)
+)
+AS
+BEGIN
+	SELECT  [CropID],[SeedNumber],[Description],[PricePerBag]
+	FROM	[dbo].[Crops]	
+END
+GO
+
 print '' print '*** creating sp_insert_crop'
 GO
 CREATE PROCEDURE [sp_insert_crop](
@@ -962,6 +974,20 @@ BEGIN
 	WHERE	[Active] = @Active
 END
 GO
+
+print '' print '*** creating sp_select_machine_by_ID'
+GO
+CREATE PROCEDURE [sp_select_machine_by_ID](
+	@MachineID		[nvarChar](50)
+)
+AS
+BEGIN
+	SELECT  [MachineID],[Make],[Model],[MachineTypeID],[MachineStatusID],[Hours],[Active]
+	FROM	[dbo].[Machine]
+	WHERE	[MachineID] = @MachineID
+END
+GO
+
 
 print '' print '*** creating sp_insert_machine'
 GO
@@ -1100,6 +1126,21 @@ BEGIN
 	WHERE	[Completed] = @Completed
 END
 GO
+
+
+print '' print '*** creating sp_select_machine_field_use_by_id'
+GO
+CREATE PROCEDURE [sp_select_machine_field_use_by_id](
+	@MachineFieldUseID		[int]
+)
+AS
+BEGIN
+	SELECT  [MachineFieldUseID],[FarmFieldID],[UsageTypeID],[MachineID],[UserID],[Description],[Completed]
+	FROM	[dbo].[MachineFieldUse]
+	WHERE	[MachineFieldUseID] = @MachineFieldUseID
+END
+GO
+
 
 print '' print '*** creating sp_insert_machine_field_use'
 GO

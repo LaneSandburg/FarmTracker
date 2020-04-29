@@ -10,6 +10,7 @@ namespace DataAccessLayer
     public interface ICropAccessor
     {
         List<Crop> SelectCrops();
+        Crop SelectCropByID(string ID);
         int UpdateCrop(Crop oldCrop, Crop newCrop);
         int InsertCrop(Crop crop);
         int DeleteCrop(string CropID);

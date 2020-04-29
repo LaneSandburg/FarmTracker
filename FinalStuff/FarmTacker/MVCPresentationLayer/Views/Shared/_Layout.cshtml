@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title Welcome To FarmCo.</title>
+    <title>FarmCo. - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:darkgreen;">
+        <a href="@Url.Action("Index", "Home")"><img src="\Images\logo.jpg" style="float:left; max-width:10%; max-height:10%; padding-left:8em; " /></a>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,18 +21,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("FarmCo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Farms", "Index", "Farm")</li>
-                    <li>@Html.ActionLink("Fields", "Index", "Fields")</li>
-                    <li>@Html.ActionLink("Machines", "Index", "Machines")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
                 @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav">
+                    <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("Home", "Index", "Home")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("Farms", "Index", "Farm")</li>
+                        <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("Machine", "Index", "Machine")</li>
+                        <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("Crop", "Index", "Crop")</li>
+                        <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("Assignments", "Index", "Assignments")</li>
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("Admin", "Index", "Admin")</li>
+                    }
+
+                    <li style="border-left:solid thin; border-left-color:black;">@Html.ActionLink("About", "About", "Home")</li>
+                    <li style="border-left:solid thin; border-left-color:black;
+                               border-right:solid thin;border-right-color:black;">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
             </div>
         </div>
     </div>
@@ -37,7 +51,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Created By Lane Sandburg</p>
+            <p>&copy; 10/15/2019 - Created By Lane Sandburg</p>
         </footer>
     </div>
 

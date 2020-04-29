@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DataObjects.Crop>
+
+
+
+<h2>@ViewBag.Title</h2>
+
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CropID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeedNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerBag)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CropID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeedNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricePerBag)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CropID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CropID }) |
+                @if (User.IsInRole("Admin,Manager"))
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CropID })
+                }
+
+            </td>
+        </tr>
+    }
+
+</table>

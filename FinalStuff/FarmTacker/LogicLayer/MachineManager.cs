@@ -64,6 +64,19 @@ namespace LogicLayer
             }
         }
 
+        public Machine GetMachineByID(string id)
+        {
+            try
+            {
+                return _machineAccessor.SelectMachineByID(id);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Machine not available", ex);
+            }
+        }
+
         public List<string> RetreiveMachineStatus()
         {
             List<string> statuss = null;

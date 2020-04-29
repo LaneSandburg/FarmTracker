@@ -68,17 +68,38 @@ D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\FarmTacker\obj\D
 D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTackerPresentaionLayer.csproj.CopyComplete
 D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.exe
 D:\Documents\SchoolStuff\sem4\.net3\Final\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.pdb
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTackerPresentaionLayer.csprojAssemblyReference.cache
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmAssignment.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmCrop.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmFarm.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmField.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmMachine.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmUpdatePassword.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmUser.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\MainWindow.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\App.g.cs
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker_MarkupCompile.cache
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker_MarkupCompile.lref
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.exe
-D:\Documents\SchoolStuff\sem4\.net3\Final\New folder\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTackerPresentaionLayer.csprojAssemblyReference.cache
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmAssignment.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmCrop.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmFarm.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmField.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmMachine.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmUpdatePassword.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmUser.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\MainWindow.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\App.g.cs
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker_MarkupCompile.cache
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker_MarkupCompile.lref
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.exe
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\FarmTacker.exe.config
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\FarmTacker.exe
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\FarmTacker.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\DataObjects.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\LogicLayer.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\DataAccessLayer.dll
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\DataObjects.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\LogicLayer.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\bin\Debug\DataAccessLayer.pdb
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmAssignment.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmCrop.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmFarm.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmField.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmMachine.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmUpdatePassword.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\frmUser.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\MainWindow.baml
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.g.resources
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTacker.Properties.Resources.resources
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTackerPresentaionLayer.csproj.GenerateResource.cache
+D:\Documents\SchoolStuff\sem4\.net3\Final\FarmTracker\FinalStuff\FarmTacker\FarmTacker\obj\Debug\FarmTackerPresentaionLayer.csproj.CopyComplete

@@ -140,7 +140,8 @@ namespace MVCPresentationLayer.Controllers
         public ActionResult Register()
         {
             return View();
-        }
+        }      
+
 
         //
         // POST: /Account/Register
@@ -151,24 +152,127 @@ namespace MVCPresentationLayer.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                //check to see if this user is in the existing DB
+                LogicLayer.UserManager usrMgr = new LogicLayer.UserManager();
+                try
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
-                    return RedirectToAction("Index", "Home");
+                    if (usrMgr.FindUser(model.Email))
+                    {
+                        //this requires the user to use the same password as the one in the database
+                        var oldUser = usrMgr.AuthenticateUser(model.Email, model.Password);
+                        var user = new ApplicationUser
+                        {
+                            GivenName = oldUser.FirstName,
+                            FamilyName = oldUser.LastName,
+                            UserID = oldUser.UserID,
+                            UserName = model.Email,
+                            Email = model.Email
+                        };
+                        //create the user with the identitiy system usermanager normally
+                        var result = await UserManager.CreateAsync(user, model.Password);
+                        if (result.Succeeded)
+                        {
+                            //use the oldUser.roles list to add internally assigned roles to the user
+                            foreach (var role in oldUser.Roles)
+                            {
+                                UserManager.AddToRole(user.Id, role);
+                            }
+                            await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                            return RedirectToAction("Index", "Home");
+                        }
+                        AddErrors(result);
+                    }
+                    else// not an exesting user 
+                    {
+                        var user = new ApplicationUser
+                        {
+                            //we will uncomment this later once our viewmodel and our view are updated to ask for them
+                            GivenName = model.GivenName,
+                            FamilyName = model.FamilyName,
+                            UserName = model.Email,
+                            Email = model.Email
+                        };
+                        var result = await UserManager.CreateAsync(user, model.Password);
+                        if (result.Succeeded)
+                        {
+                            await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                            return RedirectToAction("Index", "Home");
+                        }
+                        AddErrors(result);
+                    }
                 }
-                AddErrors(result);
+                catch (Exception)
+                {
+                    //creating old user failed probiably becasue authenticate user failed
+                    return View(model);
+                }
             }
+            //modelstate was not valid
+            return View(model);
+        }
 
-            // If we got this far, something failed, redisplay form
+        //
+        // GET: /Account/RegisterEmployeeUser
+        [Authorize(Roles = "Admin")]
+        public ActionResult RegisterEmployeeUser()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Account/RegisterEmployeeUser
+        [HttpPost]
+        [Authorize(Roles ="Admin")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RegisterEmployeeUser(RegisterEmployeeViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //check to see if this user is in the existing DB
+                LogicLayer.UserManager usrMgr = new LogicLayer.UserManager();
+                try
+                {
+                    if (usrMgr.FindUser(model.Email))
+                    {
+                        return RedirectToAction("Register", "Account");
+                    }
+                    else// not an exesting user 
+                    {
+                        var employee = new DataObjects.User()
+                        {
+                            //we will uncomment this later once our viewmodel and our view are updated to ask for them
+                            Email = model.Email,
+                            FirstName = model.GivenName,
+                            LastName = model.FamilyName,
+                            PhoneNumber = model.PhoneNumber
+                        };
+                        if (usrMgr.AddUser(employee))
+                        {
+                            var userID = usrMgr.RetrieveUserIDFromEmail(model.Email);
+                            var user = new ApplicationUser
+                            {
+                                UserID = userID,
+                                GivenName = model.GivenName,
+                                FamilyName = model.FamilyName,
+                                UserName = model.Email,
+                                Email = model.Email
+                            };
+                            var result = await UserManager.CreateAsync(user,"newuser");
+                            if (result.Succeeded)
+                            {
+                                return RedirectToAction("Index","Admin");
+                            }
+                            AddErrors(result);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    //creating employee failed probiably becasue authenticate user failed
+                    return View(model);
+                }
+            }
+            //modelstate was not valid
             return View(model);
         }
 

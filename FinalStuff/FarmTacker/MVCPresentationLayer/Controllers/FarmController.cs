@@ -22,6 +22,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // GET: Farm
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         public ActionResult Index()
         {
             ViewBag.Title = "Farm Manager";
@@ -30,6 +31,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // GET: Farm/Details/5
+        [Authorize(Roles = "Admin,LandOwner,Manager,Employee")]
         public ActionResult Details(string id)
         {
             ViewBag.Title = "Farm: " + id + " Details";
@@ -41,6 +43,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // GET: Farm/Create
+        [Authorize(Roles = "Admin,Manager,LandOwner")]
         public ActionResult Create()
         {
             var Owners = _userManager.RetreiveUserByRole("LandOwner");
@@ -55,6 +58,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // POST: Farm/Create
+        [Authorize(Roles = "Admin,Manager,LandOwner")]
         [HttpPost]
         public ActionResult Create(Farm farm)
         {
@@ -85,6 +89,7 @@ namespace MVCPresentationLayer.Controllers
 
 
         // GET: Farm/Edit/5
+        [Authorize(Roles = "Admin,Manager,LandOwner")]
         public ActionResult Edit(string id)
         {
             ViewBag.Title = "Edit Farm: " + id;
@@ -104,6 +109,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // POST: Farm/Edit/5
+        [Authorize(Roles = "Admin,Manager,LandOwner")]
         [HttpPost]
         public ActionResult Edit(string id, Farm newFarm)
         {
@@ -126,6 +132,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // GET: Farm/Delete/5
+        [Authorize(Roles = "Admin,Manager,LandOwner")]
         public ActionResult Delete(string id)
         {
             Farm farm = null;
@@ -143,6 +150,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         // POST: Farm/Delete/5
+        [Authorize(Roles = "Admin,Manager,LandOwner")]
         [HttpPost]
         public ActionResult Delete(string id, FormCollection collection)
         {
